@@ -19,6 +19,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="20dp"/>
     <ImageView
+        android:id="@+id/ivCoverDetail"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="center"

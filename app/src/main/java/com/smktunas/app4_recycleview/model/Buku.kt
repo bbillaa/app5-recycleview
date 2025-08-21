@@ -4,6 +4,6 @@ data class Buku(
     val id: Int,
     val judul: String,
     val penulis: String,
-    val tahunTerbit: String,
+    val tahun: Int,
     val cover: String
 )

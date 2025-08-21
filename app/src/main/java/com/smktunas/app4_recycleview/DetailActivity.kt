@@ -1,9 +1,10 @@
-package com.smktunas.app4_recycleview.utils
+package com.smktunas.app4_recycleview
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.smktunas.app4_recycleview.R
+import com.bumptech.glide.Glide
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,9 +18,14 @@ class DetailActivity : AppCompatActivity() {
         val judul = intent.getStringExtra("judul") ?: "Tidak ada judul"
         val penulis = intent.getStringExtra("penulis") ?: "Tidak ada penulis"
         val tahun = intent.getStringExtra("tahun") ?: "Tidak ada tahun"
+        val ivCover: ImageView =findViewById(R.id.ivCoverDetail)
 
-        tvJudul.text = judul
-        tvPenulis.text = penulis
-        tvTahun.text = tahun
+        tvJudul.text = intent.getStringExtra("judul")
+        tvPenulis.text = intent.getStringExtra("penulis")
+        tvTahun.text = intent.getStringExtra("tahun")
+
+        Glide.with(this)
+            .load(intent.getStringExtra("cover"))
+            .into(ivCover)
     }
 }

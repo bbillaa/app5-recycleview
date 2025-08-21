@@ -6,5 +6,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface ApiService {
-
+    @GET("buku")
+    fun getbuku(): Call<List<Buku>>
 }
