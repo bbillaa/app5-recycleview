@@ -14,7 +14,7 @@ import com.smktunas.app4_recycleview.R
 import com.smktunas.app4_recycleview.model.Buku
 import com.smktunas.app4_recycleview.utils.DetailActivity
 
-class BukuAdapter(
+class  BukuAdapter(
     private val context: Context,
     private val bukuList: MutableList<Buku>
 ) : RecyclerView.Adapter<BukuAdapter.ViewHolder>() {
